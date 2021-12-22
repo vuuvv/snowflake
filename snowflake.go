@@ -80,6 +80,14 @@ func NewSnowflake(opts ...Option) (s *Snowflake, err error) {
 	return
 }
 
+func (s *Snowflake) SetWorkerId(workerId int64) {
+	s.workerId = workerId
+}
+
+func (s *Snowflake) GetMaxWorks() int64 {
+	return s.maxWorkers
+}
+
 func (s *Snowflake) Next() int64 {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
