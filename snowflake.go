@@ -84,6 +84,10 @@ func (s *Snowflake) SetWorkerId(workerId int64) {
 	s.workerId = workerId
 }
 
+func (s *Snowflake) GetWorkerId() int64 {
+	return s.workerId
+}
+
 func (s *Snowflake) GetMaxWorks() int64 {
 	return s.maxWorkers
 }
